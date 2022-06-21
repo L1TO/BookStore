@@ -1,0 +1,27 @@
+package com.coursework
+
+import com.coursework.features.book.configureBookRouting
+import com.coursework.features.category.configureCategoryRouting
+import com.coursework.features.login.configureLoginRouting
+import com.coursework.features.order.configureOrderRouting
+import com.coursework.features.registration.configureRegistrationRouting
+import com.coursework.features.users.configureUsersRouting
+import io.ktor.server.engine.*
+import io.ktor.server.netty.*
+import com.coursework.plugins.*
+import org.jetbrains.exposed.sql.Database
+
+fun main() {
+    Database.connect("jdbc:mysql://localhost/coursework?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "com.mysql.cj.jdbc.Driver", "root", "1234567890q")
+
+    embeddedServer(Netty, port = 8080, watchPaths = listOf("classes"), host = "0.0.0.0") {
+        configureRouting()
+        configureLoginRouting()
+        configureRegistrationRouting()
+        configureSerialization()
+        configureUsersRouting()
+        configureCategoryRouting()
+        configureBookRouting()
+        configureOrderRouting()
+    }.start(wait = true)
+}

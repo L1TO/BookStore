@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage-Admin</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <div class="menu text-center">
+    <div class="wrapper">
+        <ul>
+            <li><a href="main-admin.html">Home</a></li>
+            <li><a href="manage-admin.html">Admin</a></li>
+            <li><a href="category-admin.html">Category</a></li>
+            <li><a href="books-admin.html">Books</a></li>
+            <li><a href="orders-admin.html">Order</a></li>
+            <li><a onclick="localStorage.removeItem('token');" href="login-admin.html">Logout</a></li>
+        </ul>
+    </div>
+  </div>
+    
+  <div class="main-content">
+    <div class="wrapper">
+        <h1>Manage Admin</h1>
+        <br>
+
+        <a href="add-admin.html" class="btn-add-admin">Add Admin</a>
+        <br/><br><br>
+
+        <table id="users-list" class="tbl-full">
+          <tr>
+            <th>Number</th>
+            <th>Full Name</th>
+            <th>Login</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+
+        </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="wrapper">
+        <p class="text-center">2022 Bookstore. Coursework. Developed by - Nazar Fokshei</p>
+    </div>
+  </div>
+</body>
+<script type="module" src="/js/validtoken.js"></script>
+<script type="module" src="/js/manage-admin.js"></script>
+</html>

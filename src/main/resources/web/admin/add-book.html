@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-Admin</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<div class="menu text-center">
+    <div class="wrapper">
+        <ul>
+            <li><a href="main-admin.html">Home</a></li>
+            <li><a href="manage-admin.html">Admin</a></li>
+            <li><a href="category-admin.html">Category</a></li>
+            <li><a href="books-admin.html">Books</a></li>
+            <li><a href="orders-admin.html">Order</a></li>
+            <li><a onclick="localStorage.removeItem('token');" href="login-admin.html">Logout</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="wrapper">
+        <h1>Add Book</h1>
+
+        <div class="container-form">
+            <div class="form" >
+                <h1>Enter Data</h1>
+                <div class="input-control">
+                    <label for="id">ID</label>
+                    <input id="id" name="id" type="text">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="title">Title</label>
+                    <input id="title" name="title" type="text">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="image_name">Image URL</label>
+                    <input id="image_name"name="image_name" type="text">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="price">Price</label>
+                    <input id="price"name="price" type="text">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="description">Description</label>
+                    <textarea style="border: 2px solid #f0f0f0; border-radius: 4px; display: block; font-size: 16px; width: 326px; height: 95px; font-size: 16px" rows="5" cols="50" id="description" name="description" type="text" ></textarea>
+                    <div class="error"></div>
+                </div>
+
+                <div>
+                    <p style="float: left">Category: &emsp;</p>
+                <select id="category">
+
+                </select>
+                </div>
+
+                <div style="margin: 3% auto 0;">
+                    <p style="float: left">Featured: &emsp;</p>
+                    <input class="checkbox" type="checkbox" name="featured" value="yes">Yes
+                    <input class="checkbox" type="checkbox" name="featured" value="no">No
+                </div>
+                <div style="margin: 3% auto 0;">
+                    <p style="float: left">Active: &emsp;</p>
+                    <input class="checkbox" type="checkbox" name="active" value="yes">Yes
+                    <input class="checkbox" type="checkbox" name="active" value="no">No
+                </div>
+                <button id="sendBtn">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="wrapper">
+        <p class="text-center">2022 Bookstore. Coursework. Developed by - Nazar Fokshei</p>
+    </div>
+</div>
+</body>
+<script type="module" src="/js/validtoken.js"></script>
+<script type="module" src="/js/add-book.js"></script>
+
+</html>
