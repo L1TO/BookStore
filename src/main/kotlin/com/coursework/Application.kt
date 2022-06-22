@@ -17,7 +17,7 @@ fun main() {
         "t066ywiahbol8mu7",
         "cfj5g7h86s9gbgyj")
 
-    embeddedServer(Netty, port = 23567 ){
+    embeddedServer(Netty, port = 8000, host = "0.0.0.0" ){
         configureRouting()
         configureLoginRouting()
         configureRegistrationRouting()
