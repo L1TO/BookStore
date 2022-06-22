@@ -14,7 +14,7 @@ import org.jetbrains.exposed.sql.Database
 fun main() {
     Database.connect("jdbc:mysql://localhost/coursework?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "com.mysql.cj.jdbc.Driver", "root", "1234567890q")
 
-    embeddedServer(Netty, port = 8080, watchPaths = listOf("classes"), host = "0.0.0.0") {
+    embeddedServer(Netty, port = System.getenv("PORT").toInt(), watchPaths = listOf("classes"), host = "0.0.0.0") {
         configureRouting()
         configureLoginRouting()
         configureRegistrationRouting()
