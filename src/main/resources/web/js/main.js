@@ -17,7 +17,7 @@ getData("/categories/fetchAll").then(
                 <h3 style="text-align: center" className="float-text text-white">${element.title}</h3>
                     </div>
                     </a>`
-                categorieslist.insertAdjacentHTML('afterend', data)
+                categorieslist.insertAdjacentHTML('afterbegin', data)
             }
             if (i == 3){
                 return
@@ -48,7 +48,7 @@ getData("/books/fetchAll").then(
                     <a href="order.html?id=${element.id}" class="btn btn-primary">Order Now</a>
                 </div>
             </div>`
-                bookList.insertAdjacentHTML('afterend', data)
+                bookList.insertAdjacentHTML('afterbegin', data)
             }
 
         })

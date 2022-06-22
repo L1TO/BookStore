@@ -120,7 +120,9 @@ fieldset{
 }
 .categories-preview-image{
     width: 260px;
-    height: auto;
+    height: 375px;
+    object-fit: cover;
+    object-position: center;
     border-radius: 3px;
 
 }
@@ -129,7 +131,21 @@ fieldset{
     float: left;
     margin: 2%;
 }
-
+.box-3 img{
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+.book-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.flex-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
 
 /* CSS for book Menu */
 .book-menu{
@@ -137,10 +153,8 @@ fieldset{
     padding: 4% 0;
 }
 .book-menu-box{
-    width: 43%;
     margin: 1%;
     padding: 2%;
-    float: left;
     background-color: white;
     border-radius: 15px;
 }
@@ -255,4 +269,67 @@ fieldset{
 }
 legend{
     color: white;
+}
+
+.about-section{
+    background: url("/images/pic.jpg") no-repeat left;
+    border-radius: 30px;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: #eeeeee;
+    padding: 75px;
+    border-radius: 30px;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text{
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
 }

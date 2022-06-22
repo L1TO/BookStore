@@ -70,6 +70,10 @@ table tr td{
     border-radius: 3px;
     padding: 1% 2%;
     text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    max-width: 200px;
+    text-align: center;
 }
 .btn-primary:hover{
     background-color: #de445b;
@@ -80,6 +84,10 @@ table tr td{
     border-radius: 3px;
     padding: 1% 2%;
     text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    max-width: 200px;
+    text-align: center;
 }
 .btn-secondary:hover{
     background-color: #4ba387;

@@ -19,7 +19,7 @@ getData("/categories/fetchAll")
                         <div class="box-3 float-container">
                         <img src="${element.image_name}" class="img-responsive img-curve">
 
-                        <h3 >${element.title}</h3>
+                        <h3 style="text-align: center" >${element.title}</h3>
                         </div>
                     </a>`
                 categoriesList.insertAdjacentHTML('afterend', data)

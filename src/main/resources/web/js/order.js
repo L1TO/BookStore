@@ -39,5 +39,6 @@ btnSubmit.onclick = () => {
         customer_email: email.value
     }
     sendData("/addOrder", JSON.stringify(data))
+    alert("Order accepted")
     window.location = "/index.html";
 }

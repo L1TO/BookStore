@@ -28,7 +28,7 @@ getData("/books/fetchAll").then(
                     <a href="order.html?id=${element.id}" class="btn btn-primary">Order Now</a>
                 </div>
             </div>`
-                bookList.insertAdjacentHTML('afterend', data)
+                bookList.insertAdjacentHTML('afterbegin', data)
             }
 
         })

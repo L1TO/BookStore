@@ -1,5 +1,5 @@
 import {sendData} from "./get-post.js";
-const booksList = document.getElementById("booksList")
+const booksList = document.getElementById("bookList")
 const container = document.getElementById("container")
 
 var search = location.search.substr(1)
@@ -43,7 +43,7 @@ sendData("/books/searchBooks", JSON.stringify({'searchQuery': search.search}))
                     <a href="order.html?id=${element.id}" class="btn btn-primary">Order Now</a>
                 </div>
             </div>`
-                    booksList.insertAdjacentHTML('afterend', data)
+                    booksList.insertAdjacentHTML('afterbegin', data)
                 }
 
             })
