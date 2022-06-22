@@ -17,7 +17,7 @@ fun main() {
         "t066ywiahbol8mu7",
         "cfj5g7h86s9gbgyj")
 
-    embeddedServer(Netty, port = 3000, port = System.getenv("PORT").toInt() ){
+    embeddedServer(Netty, port = System.getenv("PORT").toInt() ){
         configureRouting()
         configureLoginRouting()
         configureRegistrationRouting()
