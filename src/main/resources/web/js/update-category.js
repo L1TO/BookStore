@@ -24,7 +24,7 @@ var search = location.search.substr(1)
     }, {});
 
 
-sendData( "http://0.0.0.0:8080/categories/fetch", JSON.stringify({'id': search.id}))
+sendData( "/categories/fetch", JSON.stringify({'id': search.id}))
     .then(result => {id.value = result.id,
         title.value = result.title,
         image_name.value = result.image_name
