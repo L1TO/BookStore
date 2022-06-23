@@ -18,7 +18,7 @@ var search = location.search.substr(1)
     }, {});
 
 
-sendData( "http://0.0.0.0:8080/users/fetch", JSON.stringify({'login': search.login}))
+sendData( "/users/fetch", JSON.stringify({'login': search.login}))
     .then(result => {username.value = result.username,
                      login.value = result.login,
                      email.value = result.email})
